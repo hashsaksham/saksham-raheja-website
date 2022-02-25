@@ -1,4 +1,9 @@
-const orangeTheme = {
+const defaultTheme = require("tailwindcss/defaultTheme");
+const fonts = {
+  "karla-para": ["Karla", ...defaultTheme.fontFamily.sans],
+  "poppins-heading": ["Poppins", ...defaultTheme.fontFamily.sans],
+};
+const orangeColorTheme = {
   aaftab: "rgba(239, 240, 243, 1.0)", // Background
   chaand: "rgba(255, 255, 254, 1.0)", // Supporting background shade
 
@@ -11,5 +16,8 @@ const orangeTheme = {
   noor: "rgba(217, 55, 110, 1.0)",
 };
 module.exports = {
-  activeTheme: orangeTheme,
+  activeTheme: {
+    fonts: fonts,
+    colors: orangeColorTheme,
+  },
 };

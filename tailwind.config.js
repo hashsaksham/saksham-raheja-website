@@ -27,6 +27,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
+        ...activeTheme.fonts,
         // sans: ["Lato", ...defaultTheme.fontFamily.sans],
         ...defaultTheme.fontFamily,
       },
@@ -45,7 +46,7 @@ module.exports = {
       // raqs: activeTheme.raqs, // Paragraph
 
       // noor: activeTheme.noor,
-      ...activeTheme,
+      ...activeTheme.colors,
       ...defaultTheme.colors,
     },
   },
