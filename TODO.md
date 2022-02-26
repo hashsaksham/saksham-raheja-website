@@ -1,12 +1,5 @@
 # TO DO
 
-1. Highlighting of imp. text :yum:
-2. Typography :yum:
-3. Nav :yum:
-4. Namaste I am ... :yum:
-5. Logos :yum:
-6. Navbar Responsive :yum:
-
 # Ideas
 
 1. Github Api to show projects
@@ -18,8 +11,12 @@
 1. About
 2. Contact
 3. Collaboration
+4. Skills and Interests
+   - Skills => React Graphs
+   - Interests => Flairs with progress fluid indiciating amount of interest
 
 # Later
 
 1. Footer
+   - Stalk Me
 2. Hero sides

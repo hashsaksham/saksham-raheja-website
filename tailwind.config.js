@@ -11,16 +11,16 @@ module.exports = {
   theme: {
     screens: {
       mobile: { min: "100px", max: "767px" },
-      tablet: { min: "768px", max: "1023px" },
-      desktop: { min: "1024px", max: "1535px" },
+      tablet: { min: "768px", max: "1200px" },
+      desktop: { min: "1201px", max: "1536px" },
 
       mobilebelow: { max: "767px" },
-      tabletbelow: { max: "1023px" },
+      tabletbelow: { max: "1201px" },
       desktopbelow: { max: "1535px" },
 
       mobileup: { min: "100px" },
       tabletup: { min: "768px" },
-      desktopup: { min: "1024px" },
+      desktopup: { min: "1201px" },
 
       "2xl": { min: "1536px" },
       // => @media (min-width: 1536px) { ... }

@@ -96,13 +96,19 @@ $poppins-heading: "Poppins", ui-sans-serif, system-ui, -apple-system,
     }
   }
 
-  .sub-head {
-    @apply text-raqs leading-loose text-xl break-words;
+  .desc-text {
+    @apply text-raqs leading-loose text-xl break-words font-karla-para font-medium;
   }
   .keyword {
     @apply bg-accent-light px-2 py-1 rounded-md whitespace-nowrap overflow-auto;
     &:hover {
       @apply bg-accent;
+    }
+  }
+  .keyword-under {
+    @apply border-b-accent border-b-2 italic font-semibold mx-1 whitespace-nowrap capitalize overflow-auto;
+    &:hover {
+      @apply border-b-noor border-b-4;
     }
   }
   .link {
@@ -114,17 +120,29 @@ $poppins-heading: "Poppins", ui-sans-serif, system-ui, -apple-system,
   .social-icon {
     @apply border-b-2 border-accent pb-2;
   }
+  .sub-head {
+    @apply text-raqs leading-relaxed text-xl py-4 font-karla-para font-medium;
+  }
+  .round-underline {
+    position: relative;
+    z-index: 2;
+    &::after {
+      content: "";
+      height: 15px;
+      background: $accent-light;
+      border-radius: 10px;
+      display: block;
+      // content: "";
+      // position: absolute;
+      // display: flex;
+      // background: $accent-light;
+      // border-radius: 10px;
+      // height: 15px;
+      // width: 120%;
+      // left: 0;
+      // right: 0;
+      // bottom: 5px;
+      // z-index: -1;
+    }
+  }
 }
-
-//  SM ONLY
-// @media (min-width: 576px) and (max-width: 767.98px){
-//   Rules
-// }
-// // MD ONLY
-// @media (min-width: 768px) and (max-width: 991.98px){
-//   Rules
-// }
-// LG ONLY
-// @media (min-width: 992px) and (max-width: 1199.98px){
-//   Rules
-// }
