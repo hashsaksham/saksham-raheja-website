@@ -7,7 +7,7 @@ import RightCol from "./Hero/RightCol";
 
 const Hero = () => {
   return (
-    <div className="flex flex-col desktopup:h-[calc(100vh-5rem)] tabletbelow:min-h-[calc(100vh-5rem)]  bg-aaftab">
+    <div className="flex flex-col desktopup:min-h-[calc(100vh-5rem)] tabletbelow:min-h-[calc(100vh-5rem)] bg-aaftab mobilebelow:px-4">
       <Heading />
       <div className="flex flex-1 tabletbelow:flex-col">
         <LeftCol />

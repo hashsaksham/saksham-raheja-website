@@ -16,7 +16,7 @@ import SocialIconsContainer from "../../Socials/SocialIconsContainer";
 const MiddleCol = () => {
   return (
     <div className="flex items-center justify-start flex-col w-6/12 desktopup:mx-8 tabletbelow:w-full tabletbelow:flex-1">
-      <div className=" flex flex-row w-full justify-center py-4 mobile:flex-col">
+      <div className=" flex flex-row w-full justify-center py-4 mobile:flex-col ">
         <div className="flex flex-col items-center justify-evenly flex-wrap flex-1 order-1 mobile:order-2 tabletbelow:flex-row tabletbelow:mt-8">
           <SocialIconsContainer
             data={[
@@ -66,8 +66,8 @@ const MiddleCol = () => {
           />
         </div>
       </div>
-      <div className="flex-1 mx-12 desktop:mx-4 flex justify-center items-center text-center my-3">
-        <p className="desc-text mobilebelow:px-4  ">
+      <div className="flex-1 mx-12 desktopup:mx-4 flex justify-center items-center text-center my-3 mobilebelow:mx-0">
+        <p className="desc-text mobilebelow:px-3 mobilebelow:pb-6 ">
           A 14 year old Developer and Computer Enthusiast. I am member in{" "}
           <a
             target="_blank"

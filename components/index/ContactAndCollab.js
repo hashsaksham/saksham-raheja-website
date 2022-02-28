@@ -1,5 +1,6 @@
 import React from "react";
-import Sides from "./ContactaAndCollab.js/Sides";
+import ContactForm from "./ContactaAndCollab/ContactForm";
+import Sides from "./ContactaAndCollab/Sides";
 
 const ContactAndCollab = () => {
   return (
@@ -16,9 +17,14 @@ const ContactAndCollab = () => {
               want to just <span className="keyword-under">Chill & Chat</span>.
             </>
           ),
+          content: (
+            <>
+              <ContactForm />
+            </>
+          ),
         }}
       />
-      <div className="desktopup:[flex-basis:4px] bg-aaftab rounded-full"></div>
+      <div className="[flex-basis:4px] tabletbelow:mb-4  bg-aaftab rounded-full"></div>
       <Sides
         data={{
           heading: "Collaborate",
@@ -33,6 +39,7 @@ const ContactAndCollab = () => {
               <span className="keyword-under">meetup</span>.
             </>
           ),
+          content: <></>,
         }}
       />
     </div>
