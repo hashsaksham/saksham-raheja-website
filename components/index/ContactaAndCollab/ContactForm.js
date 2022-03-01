@@ -33,7 +33,9 @@ const ContactForm = () => {
         if (res.status === 200) {
           setSubmitted(true);
           setFormData({ email: "", name: "", message: "" });
-          successToast("Successfully Sent! Check your email id for response");
+          successToast("Successfully Sent! Check your email for response");
+        } else {
+          errorToast();
         }
       })
       .catch(err => {
@@ -82,6 +84,7 @@ const ContactForm = () => {
                   className=" mr-2 rounded-full "
                 />
                 <input
+                  disabled={submitted}
                   name="email"
                   required
                   value={formData.email}
@@ -99,6 +102,7 @@ const ContactForm = () => {
 
         <div className="flex flex-col justify-between items-start w-full flex-1 desktopup:px-10 gap-y-4">
           <input
+            disabled={submitted}
             name="name"
             required
             value={formData.name}
@@ -109,6 +113,7 @@ const ContactForm = () => {
           />
 
           <textarea
+            disabled={submitted}
             required
             name="message"
             value={formData.message}
@@ -117,10 +122,11 @@ const ContactForm = () => {
             className="resize-none w-full p-4 h-36 rounded-xl border-chaand border  focus:border-accent focus:border"
           ></textarea>
           <button
+            // disabled={submitted}
             type="submit"
-            className="w-1/2 flex items-center justify-center mx-auto bg-accent-light p-3 rounded-2xl hover:bg-accent"
+            className="w-1/2 flex items-center justify-center mx-auto bg-accent-light p-3 rounded-2xl hover:bg-accent disabled:line-through"
           >
-            Send &nbsp; <AiOutlineSend />
+            &nbsp; Send &nbsp; <AiOutlineSend />
           </button>
         </div>
       </div>

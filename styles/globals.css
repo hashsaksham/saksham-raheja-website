@@ -72,6 +72,10 @@
   html {
     @apply font-karla-para text-raqs;
   }
+  input:disabled,
+  button:disabled {
+    @apply cursor-not-allowed;
+  }
 }
 
 @layer utilities {

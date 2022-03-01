@@ -1,4 +1,8 @@
 export default function contact(req, res) {
+  if (!(req.body.email && req.body.name && req.body.message)) {
+    return res.status(500).json({ msg: "Internal Server Error" });
+  }
+
   let nodemailer = require("nodemailer");
   require("dotenv").config();
   const transporter = nodemailer.createTransport({

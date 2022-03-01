@@ -56,7 +56,7 @@ const Navbar = () => {
         </Link>
         {/*  */}
         <ul className="flex justify-evenly items-center tabletbelow:hidden w-5/12 h-full ">
-          <NavLink href={"/latest"} label={"Life Updates"} />
+          <NavLink href={"/latest"} label={"Life"} />
           <NavLink href={"/projects"} label={"Projects"} />
         </ul>
         {/*  */}
