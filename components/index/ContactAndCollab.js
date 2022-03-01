@@ -1,10 +1,11 @@
 import React from "react";
 import ContactForm from "./ContactaAndCollab/ContactForm";
 import Sides from "./ContactaAndCollab/Sides";
+import CollabContent from "./ContactaAndCollab/CollabContent";
 
 const ContactAndCollab = () => {
   return (
-    <div className="flex flex-row tabletbelow:flex-col desktopup:min-h-[calc(100vh-5rem)] bg-chaand p-5">
+    <div className="flex flex-row tabletbelow:flex-col desktopup:min-h-[calc(100vh-5rem)] bg-chaand p-5 desktopup:py-8">
       <Sides
         data={{
           heading: <> Contact Me </>,
@@ -39,7 +40,11 @@ const ContactAndCollab = () => {
               <span className="keyword-under">meetup</span>.
             </>
           ),
-          content: <></>,
+          content: (
+            <>
+              <CollabContent />
+            </>
+          ),
         }}
       />
     </div>

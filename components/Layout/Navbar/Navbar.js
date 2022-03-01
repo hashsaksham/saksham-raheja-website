@@ -41,7 +41,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="sticky flex justify-center items-center h-20 top-0 left-0  w-full z-50  bg-aaftab">
+      <nav className="fixed flex justify-center items-center h-20 top-0 left-0  w-full z-50  bg-aaftab">
         <ul className="flex justify-evenly items-center tabletbelow:hidden w-5/12 h-full ">
           <NavLink href={"/"} label={"Home"} />
           <NavLink href={"/blog"} label={"Blog"} />

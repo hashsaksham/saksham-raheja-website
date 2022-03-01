@@ -81,7 +81,9 @@ const MiddleCol = () => {
           <span className="keyword">Delhi Public School, R.K. Puram</span>. I
           love to develop & tinker with stuff. I love{" "}
           <span className="keyword-under">Silicon Chips</span> and{" "}
-          <span className="keyword-under">Music</span> among other things.
+          <span className="keyword-under">Music</span> among other things. I
+          strongly beleive in
+          <span className="keyword-under">&quot;We, Not I&quot;.</span>
         </p>
       </div>
     </div>

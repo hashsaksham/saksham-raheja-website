@@ -23,12 +23,22 @@ module.exports = {
       desktopup: { min: "1201px" },
 
       "2xl": { min: "1536px" },
-      // => @media (min-width: 1536px) { ... }
     },
     extend: {
+      flexGrow: {
+        2: 2,
+        3: 3,
+        4: 4,
+        5: 5,
+      },
+      flexShrink: {
+        2: 2,
+        3: 3,
+        4: 4,
+        5: 5,
+      },
       fontFamily: {
         ...activeTheme.fonts,
-        // sans: ["Lato", ...defaultTheme.fontFamily.sans],
         ...defaultTheme.fontFamily,
       },
       spacing: {
@@ -36,18 +46,8 @@ module.exports = {
       },
     },
     colors: {
-      // aaftab: activeTheme.aaftab, // Background
-      // chaand: activeTheme.chaand, // Supporting background shade
-
-      // accent: activeTheme.accent, // Primary Color
-      // // accent-secondary: "rgba(255,142,60,1.0), // Hover
-
-      // qurbat: activeTheme.qurbat, // Headline
-      // raqs: activeTheme.raqs, // Paragraph
-
-      // noor: activeTheme.noor,
+      // ...defaultTheme.colors,
       ...activeTheme.colors,
-      ...defaultTheme.colors,
     },
   },
   variants: {

@@ -100,7 +100,7 @@
     @apply text-raqs leading-loose text-xl break-words font-karla-para font-medium;
   }
   .keyword {
-    @apply bg-accent-light px-2 py-1 rounded-md whitespace-nowrap overflow-auto;
+    @apply bg-accent-light px-2 py-1 rounded-md whitespace-nowrap overflow-auto font-bold;
   }
   .keyword:hover {
     @apply bg-accent;
@@ -115,8 +115,12 @@
     @apply border-b-2 border-accent pb-2;
   }
   .sub-head {
-    @apply text-raqs leading-relaxed text-xl py-4 font-karla-para font-medium;
+    @apply text-raqs leading-relaxed text-xl py-3 font-karla-para font-medium;
   }
+  .para {
+    @apply text-raqs leading-normal text-lg py-2 font-karla-para font-normal;
+  }
+
   .round-underline {
     position: relative;
     z-index: 2;

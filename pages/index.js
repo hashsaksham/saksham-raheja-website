@@ -16,9 +16,9 @@ export default function Home() {
   // }, [setPageSections]);
 
   return (
-    <>
+    <div className="mt-20">
       <Hero />
       <ContactAndCollab />
-    </>
+    </div>
   );
 }
