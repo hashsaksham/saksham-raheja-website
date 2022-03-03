@@ -37,6 +37,7 @@ const ContactForm = () => {
         } else {
           errorToast();
         }
+        console.log(res.json());
       })
       .catch(err => {
         errorToast();

@@ -37,15 +37,15 @@ export default function contact(req, res) {
   };
   transporter.sendMail(mailData_toME, function (err, info) {
     if (err) {
-      console.log(err);
-      return res.status(500).json({ msg: "Internal Server Error" });
+      console.error(err);
+      return res.status(500).json({ msg: "toME ERROR", err });
     } else console.log(info);
   });
 
   transporter.sendMail(mailData_toSENDER, function (err, info) {
     if (err) {
-      console.log(err);
-      return res.status(500).json({ msg: "Internal Server Error" });
+      console.error(err);
+      return res.status(500).json({ msg: "toSENDER ERROR", err });
     } else console.log(info);
   });
 

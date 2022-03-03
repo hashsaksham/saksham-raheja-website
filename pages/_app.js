@@ -12,6 +12,11 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <title>Saksham Raheja</title>
         <link rel="shortcut icon" href="/main.jpg" type="image/x-icon"></link>
+        <meta typeof="content" content="sakshamraheja.com" />
+        <meta typeof="content" content="saksham raheja" />
+        <meta typeof="content" content="saksham website" />
+        <meta typeof="content" content="hashsaksham" />
+        <meta typeof="content" content="hashsaksham website" />
       </Head>
       <Layout>
         <Component {...pageProps} />
