@@ -1,11 +1,12 @@
-export default function contact(req, res) {
+/* eslint-disable import/no-anonymous-default-export */
+export default async (req, res) => {
   if (!(req.body.email && req.body.name && req.body.message)) {
     return res.status(500).json({ msg: "Internal Server Error" });
   }
 
   let nodemailer = require("nodemailer");
   require("dotenv").config();
-  const transporter = nodemailer.createTransport({
+  const transporter = await nodemailer.createTransport({
     port: 465,
     host: "smtp.gmail.com",
     auth: {
@@ -15,6 +16,20 @@ export default function contact(req, res) {
     },
     secure: true,
   });
+  await new Promise((resolve, reject) => {
+    // verify connection configuration
+    transporter.verify(function (error, success) {
+      if (error) {
+        console.log(error);
+        return res.status(500).json({ msg: "Internal Server Error" });
+        reject(error);
+      } else {
+        console.log("Server is ready to take our messages");
+        resolve(success);
+      }
+    });
+  });
+
   const mailData_toME = {
     from: "noreply.hashsaksham@gmail.com",
     to: "sakshamraheja11@gmail.com",
@@ -35,19 +50,29 @@ export default function contact(req, res) {
     <div style="color:grey; white-space: pre-wrap;">${req.body.message}</div><p>Sent from:
     ${req.body.email}</p>`,
   };
-  transporter.sendMail(mailData_toME, function (err, info) {
-    if (err) {
-      console.error(err);
-      return res.status(500).json({ msg: "toME ERROR", err });
-    } else console.log(info);
+  await new Promise((resolve, reject) => {
+    transporter.sendMail(mailData_toME, function (err, info) {
+      if (err) {
+        console.error(err);
+        reject(err);
+        return res.status(500).json({ msg: "toME ERROR", err });
+      } else {
+        console.log(info);
+        resolve(info);
+      }
+    });
   });
-
-  transporter.sendMail(mailData_toSENDER, function (err, info) {
-    if (err) {
-      console.error(err);
-      return res.status(500).json({ msg: "toSENDER ERROR", err });
-    } else console.log(info);
+  await new Promise((resolve, reject) => {
+    transporter.sendMail(mailData_toSENDER, function (err, info) {
+      if (err) {
+        console.error(err);
+        reject(err);
+        return res.status(500).json({ msg: "toSENDER ERROR", err });
+      } else {
+        console.log(info);
+        resolve(info);
+      }
+    });
   });
-
   return res.status(200).json({ msg: "success" });
-}
+};

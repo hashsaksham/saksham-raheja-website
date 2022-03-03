@@ -2,7 +2,13 @@
 import React, { useState } from "react";
 import { RiAccountCircleLine } from "react-icons/ri";
 import { AiOutlineSend } from "react-icons/ai";
-import { errorToast, successToast } from "./../../Toast";
+import {
+  errorToast,
+  successToast,
+  successToastOptions,
+  errorToastOptions,
+} from "./../../Toast";
+import { toast } from "react-toastify";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -12,38 +18,57 @@ const ContactForm = () => {
   });
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = e => {
+  const handleSubmit = async e => {
     e.preventDefault();
-
     let data = {
       email: formData.email,
       name: formData.name,
       message: formData.message,
     };
-
-    fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        Accept: "application/json, text/plain, */*",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    })
-      .then(res => {
-        if (res.status === 200) {
-          setSubmitted(true);
-          setFormData({ email: "", name: "", message: "" });
-          successToast("Successfully Sent! Check your email for response");
-        } else {
-          errorToast();
-        }
-        console.log(res.json());
-      })
-      .catch(err => {
-        errorToast();
+    try {
+      let res;
+      const postFunc = () => {
+        return new Promise(async (resolve, reject) => {
+          res = await fetch("/api/contact", {
+            method: "POST",
+            headers: {
+              Accept: "application/json, text/plain, */*",
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+          });
+          if (res.status === 200) {
+            setSubmitted(true);
+            setFormData({ email: "", name: "", message: "" });
+            resolve(200);
+          } else {
+            reject(500);
+          }
+        });
+      };
+      toast.promise(postFunc, {
+        pending: "Processing...",
+        success: {
+          render() {
+            return "Successfully Sent! Check your email for response";
+          },
+          ...successToastOptions,
+        },
+        error: {
+          render() {
+            return "Oops! Some Error Occurred";
+          },
+          ...errorToastOptions,
+        },
       });
-  };
+      // errorToast();
+      // successToast("");
 
+      // console.log(await res.json());
+    } catch (err) {
+      errorToast();
+    }
+  };
   const handleChange = e => {
     const { name, value } = e.target;
     setFormData({
