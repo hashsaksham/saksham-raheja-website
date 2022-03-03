@@ -27,7 +27,6 @@
 
 @layer base {
   * {
-    transition: all 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -68,6 +67,7 @@
     @apply w-full;
     min-height: 100vh;
     background-color: var(--aaftab);
+    transition: all 0.5s ease-out 0s;
   }
   html {
     @apply font-karla-para text-raqs;
