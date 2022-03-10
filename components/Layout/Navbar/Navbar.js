@@ -39,12 +39,24 @@ const Navbar = () => {
     }
   }, [windowSize.width]);
 
+  const links = [
+    { href: "/", label: "Home", left: true },
+    { href: "/blog", label: "Blog", left: true },
+    { href: "/life", label: "Life", right: true },
+    { href: "/projects", label: "Projects", right: true },
+  ];
+
   return (
     <>
       <nav className="fixed flex justify-center items-center h-20 top-0 left-0  w-full z-50  bg-aaftab">
         <ul className="flex justify-evenly items-center tabletbelow:hidden w-5/12 h-full ">
-          <NavLink href={"/"} label={"Home"} />
-          <NavLink href={"/blog"} label={"Blog"} />
+          {links
+            .filter((link) => link.left)
+            .map((link, index) => {
+              return (
+                <NavLink key={index} href={link.href} label={link.label} />
+              );
+            })}
         </ul>
         {/*  */}
         <Link href={"/"} passHref>
@@ -56,8 +68,13 @@ const Navbar = () => {
         </Link>
         {/*  */}
         <ul className="flex justify-evenly items-center tabletbelow:hidden w-5/12 h-full ">
-          <NavLink href={"/latest"} label={"Life"} />
-          <NavLink href={"/projects"} label={"Projects"} />
+          {links
+            .filter((link) => link.right)
+            .map((link, index) => {
+              return (
+                <NavLink key={index} href={link.href} label={link.label} />
+              );
+            })}
         </ul>
         {/*  */}
         <button
@@ -72,30 +89,17 @@ const Navbar = () => {
           }  transition-all duration-500 top-20 left-0 right-0 bottom-0 bg-aaftab  text-raqs z-40 border-t-4 border-t-accent`}
         >
           <ul className="flex justify-center items-center flex-col w-full ">
-            <NavLink
-              href={"/"}
-              label={"Home"}
-              menu={true}
-              setMenuOpen={setMenuOpen}
-            />
-            <NavLink
-              href={"/blog"}
-              label={"Blog"}
-              menu={true}
-              setMenuOpen={setMenuOpen}
-            />
-            <NavLink
-              href={"/latest"}
-              label={"Life Updates"}
-              menu={true}
-              setMenuOpen={setMenuOpen}
-            />
-            <NavLink
-              href={"/projects"}
-              label={"Projects"}
-              menu={true}
-              setMenuOpen={setMenuOpen}
-            />
+            {links.map((link, index) => {
+              return (
+                <NavLink
+                  key={index}
+                  href={link.href}
+                  label={link.label}
+                  menu={true}
+                  setMenuOpen={setMenuOpen}
+                />
+              );
+            })}
           </ul>
         </div>
       </nav>
