@@ -82,7 +82,7 @@ const MiddleCol = () => {
           love to develop & tinker with stuff. I love{" "}
           <span className="keyword-under">Silicon Chips</span> and{" "}
           <span className="keyword-under">Music</span> among other things. I
-          strongly beleive in
+          strongly believe in
           <span className="keyword-under">&quot;We, Not I&quot;.</span>
         </p>
       </div>
