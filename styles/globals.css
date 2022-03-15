@@ -70,7 +70,7 @@
     transition: all 0.5s ease-out 0s;
   }
   html {
-    @apply font-karla-para text-raqs;
+    @apply font-karla-para text-raqs overflow-x-hidden;
   }
   input:disabled,
   button:disabled {

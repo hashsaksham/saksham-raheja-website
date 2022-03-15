@@ -86,7 +86,7 @@ const Navbar = () => {
         <div
           className={`fixed  ${
             menuOpen ? "translate-y-0 " : " translate-y-[-100vh]"
-          }  transition-all duration-500 top-20 left-0 right-0 bottom-0 bg-aaftab  text-raqs z-40 border-t-4 border-t-accent`}
+          }  transition-all duration-500 top-20 left-0 right-0 bottom-0 bg-aaftab hidden tabletbelow:block  text-raqs z-40 border-t-4 border-t-accent`}
         >
           <ul className="flex justify-center items-center flex-col w-full ">
             {links.map((link, index) => {

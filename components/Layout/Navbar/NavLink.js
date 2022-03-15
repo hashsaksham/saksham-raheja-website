@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
 
 const NavLink = ({ href, label, menu = false, setMenuOpen }) => {
   const router = useRouter();
@@ -9,12 +8,12 @@ const NavLink = ({ href, label, menu = false, setMenuOpen }) => {
     <Link href={href} passHref>
       <li
         onClick={menu ? () => setMenuOpen(false) : null}
-        className={`text-center ${
+        className={`text-center cursor-pointer ${
           menu && `w-full py-6 px-2 ${router.pathname == href && "bg-chaand"}`
         } `}
       >
         <a
-          className={`font-extrabold  text-center text-raqs ${
+          className={`cursor-pointer font-extrabold  text-center text-raqs ${
             router.pathname == href &&
             "underline-offset-4 underline decoration-accent"
           }

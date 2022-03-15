@@ -18,7 +18,7 @@ const ContactForm = () => {
   });
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = async e => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     let data = {
       email: formData.email,
@@ -69,7 +69,7 @@ const ContactForm = () => {
       errorToast();
     }
   };
-  const handleChange = e => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
@@ -145,7 +145,7 @@ const ContactForm = () => {
             value={formData.message}
             onChange={handleChange}
             placeholder="Message..."
-            className="resize-none w-full p-4 h-36 rounded-xl border-chaand border  focus:border-accent focus:border"
+            className="flex-1 resize-none w-full p-4 min-h-[9rem] rounded-xl border-chaand border  focus:border-accent focus:border"
           ></textarea>
           <button
             // disabled={submitted}
