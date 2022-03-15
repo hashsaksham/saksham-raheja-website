@@ -1,7 +1,13 @@
 /* POPPINS */
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@font-face {
+  font-family: "Poppins";
+  src: url("/Poppins-Regular.ttf");
+}
 /* KARLA */
-@import url("https://fonts.googleapis.com/css2?family=Karla&display=swap");
+@font-face {
+  font-family: "Karla";
+  src: url("/Karla-Regular.ttf");
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -15,10 +21,11 @@
   --raqs: rgba(42, 42, 42, 1); /* Paragraph */
   --noor: rgba(217, 55, 110, 1);
 
-  --karla-para: "Karla, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "
+  --karla-para: "Karla", ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont,
     Segoe UI ", Roboto, " Helvetica Neue ", Arial, " Noto Sans ", sans-serif, "
-    Apple Color Emoji ", " Segoe UI Emoji ", " Segoe UI Symbol ", " Noto Color
-    Emoji "";
+      Apple Color Emoji ", " Segoe UI Emoji ", " Segoe UI Symbol ", " Noto Color
+      Emoji "";
   --poppins-heading: "Poppins", ui-sans-serif, system-ui, -apple-system,
     BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
