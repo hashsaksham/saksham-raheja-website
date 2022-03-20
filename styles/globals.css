@@ -107,7 +107,7 @@
   }
 
   .desc-text {
-    @apply text-raqs leading-loose text-xl break-words font-karla-para font-medium;
+    @apply text-raqs leading-loose text-lg break-words font-karla-para font-medium;
   }
   .keyword {
     @apply bg-accent-light px-2 py-1 rounded-md whitespace-nowrap overflow-auto font-bold;
