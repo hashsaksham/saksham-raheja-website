@@ -33,10 +33,10 @@ const CollabContent = () => {
           />
         </div>
       </div>
-      <div className="grow-2 shrink-2 basis-0 flex flex-col items-center justify-between tabletbelow:w-full tabletbelow:mt-4 h-full">
-        <p className="para  ">
+      <div className="grow-2 shrink-2 basis-0 flex flex-col items-center justify-center tabletbelow:w-full tabletbelow:mt-4 h-full">
+        {/* <p className="para  ">
           You can either fill the form or message me on social media
-        </p>
+        </p> */}
 
         <img
           src="/collab.gif"
