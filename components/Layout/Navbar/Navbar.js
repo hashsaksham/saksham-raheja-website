@@ -42,7 +42,7 @@ const Navbar = () => {
   const links = [
     { href: "/", label: "Home", left: true },
     { href: "/blog", label: "Blog", left: true },
-    { href: "/life", label: "Life", right: true },
+    { href: "/for-non-humans", label: "Coercion", right: true },
     { href: "/projects", label: "Projects", right: true },
   ];
 
