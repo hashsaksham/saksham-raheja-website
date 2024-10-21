@@ -41,9 +41,9 @@ const Navbar = () => {
 
   const links = [
     { href: "/", label: "Home", left: true },
-    { href: "/blog", label: "Blog", left: true },
-    { href: "/for-non-humans", label: "Coercion", right: true },
-    { href: "/projects", label: "Projects", right: true },
+    { href: "/", label: "", left: true },
+    { href: "/", label: "", right: true },
+    { href: "/", label: "", right: true },
   ];
 
   return (
