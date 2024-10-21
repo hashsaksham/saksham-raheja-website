@@ -68,7 +68,7 @@ const MiddleCol = () => {
       </div>
       <div className="mx-12 desktopup:mx-4 flex justify-center items-center text-center my-3 mobilebelow:mx-0">
         <p className="desc-text mobilebelow:px-3 mobilebelow:pb-6 ">
-          A 15 year old Developer and Math Enthusiast. I am member in{" "}
+          A 17 year old Developer and Math Enthusiast. I am member in{" "}
           <a
             target="_blank"
             rel="noreferrer"
