@@ -17,6 +17,12 @@ function MyApp({ Component, pageProps }) {
         <meta typeof="content" content="saksham website" />
         <meta typeof="content" content="hashsaksham" />
         <meta typeof="content" content="hashsaksham website" />
+
+        <meta property="og:site_name" content="Namaste!">
+        <meta property="og:title" content="Saksham Raheja" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" itemprop="image" content="/main.jpg">
+        <meta property="og:type" content="website" />
       </Head>
       <Layout>
         <Component {...pageProps} />
