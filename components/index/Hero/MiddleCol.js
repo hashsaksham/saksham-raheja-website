@@ -71,22 +71,22 @@ const MiddleCol = () => {
         Hi, I’m Saksham, 18 years old and professionally clueless — but I make up for it with enthusiasm. 
         I dive headfirst into whatever catches my eye, crash a few times, and somehow keep going.
         Think of me as a work in progress with a terrible sense of direction but a lot of heart.
-          // A 18 year old Developer and Math Enthusiast. I am member in{" "}
-          // <a
-          //   target="_blank"
-          //   rel="noreferrer"
-          //   href="https://exunclan.com"
-          //   className="link"
-          // >
-          //   <span className="keyword">Exun Clan</span>
-          // </a>
-          // , the technology club of my school,{" "}
-          // <span className="keyword">Delhi Public School, R.K. Puram</span>. I
-          // love to develop & tinker with stuff. I love{" "}
-          // <span className="keyword-under">Silicon Chips</span> and{" "}
-          // <span className="keyword-under">Music</span> among other things. I
-          // strongly believe in
-          // <span className="keyword-under">&quot;We, Not I&quot;.</span>
+        {/* A 18 year old Developer and Math Enthusiast. I am member in{" "}
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://exunclan.com"
+            className="link"
+          >
+            <span className="keyword">Exun Clan</span>
+          </a>
+          , the technology club of my school,{" "}
+          <span className="keyword">Delhi Public School, R.K. Puram</span>. I
+          love to develop & tinker with stuff. I love{" "}
+          <span className="keyword-under">Silicon Chips</span> and{" "}
+          <span className="keyword-under">Music</span> among other things. I
+          strongly believe in
+          <span className="keyword-under">&quot;We, Not I&quot;.</span> */}
         </p>
       </div>
     </div>
